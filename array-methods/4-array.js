@@ -35,7 +35,7 @@ let dogAge = (array) => {
   let sum = 0;
   for(let i = 0; i < array.length; i++) {
     if(array[i].type === "dog") {
-      sum += dogsArr[i].age * 7;
+      sum += array[i].age * 7;
     }
   }
   return sum;
@@ -46,7 +46,6 @@ dogAge(data);
 
 // Write the same function using
 // 1. filter - for filtering the cat or dog
-
 let dogAge = (array) => {
   let sum = 0;
   array.filter(data => ( data.type === "dog") && (sum += data.age * 7) );
